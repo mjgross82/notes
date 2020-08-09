@@ -1,15 +1,15 @@
 // Dependencies
 const fs = require("fs");
 const path = require("path");
-const db = require("../db/db.json");
+let db = require("../db/db.json");
 
 // Routing
-const pathJSON = path.join(__dirname, "../db/db.json");
+let pathJSON = path.join(__dirname, "../db/db.json");
 
-module.exports = (app) => {
+module.exports = function(app) {
 
     app.get("/api/notes", function (req, res) {
-        res.json(dbFile);
+        res.json(db);
     });
 
     // Create a new note

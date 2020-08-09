@@ -2,7 +2,7 @@
 const path = require("path");
 
 // Routing
-module.exports = (app) => {
+module.exports = function(app) {
 
     // Show notes.html when the uder visits accesses that page
     app.get("/notes", function (req, res) {
